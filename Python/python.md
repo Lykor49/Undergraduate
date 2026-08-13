@@ -18,6 +18,8 @@
 - input() 用户输入字符串, 并存放到一个变量里
  - name = input() -> 用户输入Lykor -> name变量为Lykor
 
+# 2 Python基础
+
 # 2.1 数据类型和变量
 
 ## 数据类型
@@ -183,3 +185,60 @@ for name, score in zip(names, scores):
     print(name, score)
 ```
 
+# 3 函数
+
+# 3.1 定义函数
+- def: 依次写出函数名、括号、括号中的参数和冒号:
+
+```python
+def my_abs(x):
+    if x >= 0:
+        return x
+    else:
+        return -x
+
+print(my_abs(-99))
+```
+
+# 3.2 函数的参数
+- 位置参数: 下方x, n均为位置参数
+
+```python
+def power(x, n):
+    s = 1
+    while n > 0:
+        n = n - 1
+        s = s * x
+    return s
+```
+
+- 默认参数
+
+```python
+def power(x, n=2):
+    s = 1
+    while n > 0:
+        n = n - 1
+        s = s * x
+    return s
+```
+
+- 可变参数: 传入的参数个数是可变的, 可以是1个、2个到任意个
+
+```python
+def calc(*numbers):
+    sum = 0
+    for n in numbers:
+        sum = sum + n * n
+    return sum
+```
+
+- 关键字参数: 关键字参数允许你传入0个或任意个含参数名的参数, 这些关键字参数在函数内部自动组装为一个dict
+
+```python
+def person(name, age, **kw):
+    print('name:', name, 'age:', age, 'other:', kw)
+
+>>> person('Michael', 30)
+name: Michael age: 30 other: {}
+```
