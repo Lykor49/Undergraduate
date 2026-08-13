@@ -62,7 +62,7 @@
  - s = {1, 2, 3}
 
 # 2.4 条件判断
-- if / else / elif
+## if / else / elif
 
 ```python
 age = 20
@@ -75,11 +75,10 @@ else:
 ```
 
 # 2.5 模式匹配
-- match: match - case匹配
+## match: match - case匹配
 
-```
+```python
 age = 15
-
 match age:
     case x if x < 10:
         print(f'< 10 years old: {x}')
@@ -93,9 +92,9 @@ match age:
         print('not sure.')
 ```
 
-- 复杂匹配: 匹配列表
+## 复杂匹配: 匹配列表
 
-```
+```python
 args = ['gcc', 'hello.c', 'world.c']
 # args = ['clean']
 # args = ['gcc']
@@ -113,3 +112,74 @@ match args:
     case _:
         print('invalid command.')
 ```
+
+# 2.6 循环
+## for...in 循环: 依次把list或tuple中的每个元素迭代出来
+ 
+```python
+names = ['Michael', 'Bob', 'Tracy']
+for name in names:
+    print(name)
+```
+
+## while 循环: 只要条件满足, 就不断循环, 条件不满足时退出循环
+
+```python
+sum = 0
+n = 99
+while n > 0:
+    sum = sum + n
+    n = n - 2
+print(sum)
+```
+
+## break: 在循环中break可以提前退出循环
+
+```python
+n = 1
+while n <= 100:
+    if n > 10: # 当n = 11时，条件满足，执行break语句
+        break # break语句会结束当前循环
+    print(n)
+    n = n + 1
+print('END')
+```
+
+## continue: 跳过当前的这次循环, 直接开始下一次循环
+
+```python
+n = 0
+while n < 10:
+    n = n + 1
+    if n % 2 == 0: # 如果n是偶数，执行continue语句
+        continue # continue语句会直接继续下一轮循环，后续的print()语句不会执行
+    print(n)
+```
+
+## range: 生成一串整数, 常和for循环一起使用
+- range(起点, 终点, 步长)
+
+```python
+for i in range(5):
+    print(i)
+```
+
+## enumerate: 遍历数据时, 同时得到“序号”和“元素”
+
+```python
+names = ['Tom', 'Mike', 'Jack']
+
+for i, name in enumerate(names):
+    print(i, name)
+```
+
+## zip: 同时遍历两个或多个序列
+
+```python
+names = ['Tom', 'Mike', 'Jack']
+scores = [80, 90, 85]
+
+for name, score in zip(names, scores):
+    print(name, score)
+```
+
