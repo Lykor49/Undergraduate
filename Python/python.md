@@ -242,3 +242,188 @@ def person(name, age, **kw):
 >>> person('Michael', 30)
 name: Michael age: 30 other: {}
 ```
+
+# 4 高级特性
+
+# 4.1 切片
+- L[0:3]: 从索引0开始取, 直到索引3为止, 但不包括索引3; 即0, 1, 2, 正好是三个元素
+
+```python
+L = ['Michael', 'Sarah', 'Tracy', 'Bob', 'Jack']
+>>> L[0:3]
+['Michael', 'Sarah', 'Tracy']
+>>> L[:3]
+['Michael', 'Sarah', 'Tracy']
+>>> L[1:3]
+['Sarah', 'Tracy']
+>>> L[-1]      # 最后一个元素
+'Jack'
+>>> L[-2:]     # 最后两个元素
+['Bob', 'Jack']
+>>> L[::2]     # 每隔一个取一个
+['Michael', 'Tracy', 'Jack']
+>>> L[::-1]    # 倒序
+['Jack', 'Bob', 'Tracy', 'Sarah', 'Michael']
+```
+
+# 4.2 迭代
+- 迭代 Iteration: 给定一个list或tuple, 可以通过for循环来遍历这个list或tuple
+
+```python
+>>> d = {'a': 1, 'b': 2, 'c': 3}
+>>> for key in d:
+...     print(key)
+...
+a
+c
+b
+
+names = ['Tom', 'Jack', 'Mike']
+for i, name in enumerate(names):
+    print(i, name)
+
+names = ['Tom', 'Jack']
+scores = [90, 80]
+for name, score in zip(names, scores):
+    print(name, score)
+
+d = {'a': 1, 'b': 2, 'c': 3}
+for key, value in d.items():
+    print(key, value)
+```
+
+# 4.3 列表生成式
+- 列表生成式 List Comprehensions: 用来创建list的生成式
+- 把要生成的元素x*x放到前面, 后面跟for循环
+
+```python
+>>> [x * x for x in range(1, 11)]
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+>>> [x * x for x in range(1, 11) if x % 2 == 0]
+[4, 16, 36, 64, 100]
+```
+
+# 4.4 生成器
+- 生成器 generator: 边循环边计算的机制
+- generator保存的是算法, 每次调用next(g), 就计算出g的下一个元素的值, 直到计算到最后一个元素
+
+```python
+>>> g = (x * x for x in range(10))
+>>> next(g)
+0
+>>> next(g)
+1
+>>> next(g)
+4
+
+g = (x * x for x in range(5))
+for x in g:
+    print(x)
+```
+
+# 4.5 迭代器
+- 迭代器 Iterator: 可以被next()函数调用并不断返回下一个值的对象
+
+# 5 模块
+
+# 5.1 使用模块
+- 模块定义: 一个.py文件就是一个Python模块(module)
+- import xxx -> 导入整个模块; 使用时一般写 xxx.xxx
+- from xxx import yyy -> 从xxx模块/包中导入指定的yyy; 可以直接调用 yyy
+
+```python
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+' a test module '
+
+__author__ = 'Michael Liao'     ## 作者信息    
+
+import sys                      ## 导入Python标准库中的sys模块
+
+def test():
+    args = sys.argv
+    if len(args)==1:
+        print('Hello, world!')
+    elif len(args)==2:
+        print('Hello, %s!' % args[1])
+    else:
+        print('Too many arguments!')
+
+if __name__=='__main__':
+    test()
+```
+
+# 6 类与对象
+- 面对对象编程 Object Oriented Programming (OOP)
+- OOP把对象作为程序的基本单元, 一个对象包含了数据和操作数据的函数
+
+# 6.1 类和实例
+- 面对对象最重要的概念就是类(class)和实例(Instance)
+- 类是抽象的模版, 实例是根据类创建出来的一个个具体的“对象”
+
+```python
+class Student(object):                     ## class后面接类名, 通常是大写开头的单词
+    def __init__(self, name, score):       ## 将认为必须绑定的属性强制填写进去
+        self.name = name
+        self.score = score
+
+>>> bart = Student('Bart Simpson', 59)     ## self指向创建的实例本身, 不需要传
+>>> bart.name
+'Bart Simpson'
+>>> bart.score
+59
+
+## 数据封装: 可以直接在实例上调用, 直接操作对象内部的数据, 无需知道方法内部的实现细节
+class Student(object):
+    def __init__(self, name, score):
+        self.name = name
+        self.score = score
+
+    def print_score(self):
+        print('%s: %s' % (self.name, self.score))
+```
+
+# 6.2 访问限制
+- 让内部属性不被外部访问, 可以把属性的名称前加上两个下划线__, python中实例变量名以__开头, 为私有变量, 只有内部可以访问
+
+```python
+class Student(object):
+    def __init__(self, name, score):
+        self.__name = name
+        self.__score = score
+
+    def print_score(self):
+        print('%s: %s' % (self.__name, self.__score))
+
+    def get_name(self):             ## 外部代码获取name和score需要内部加函数
+        return self.__name
+
+    def get_score(self):
+        return self.__score
+
+    def set_score(self, score):     ## 外部代码修改score
+        self.__score = score
+```
+
+# 6.3 继承和多态
+- 当我们定义一个class的时候, 可以从某个现有的class继承, 新的class称为子类(Subclass), 而被继承的class称为基类、父类或超类(Base class、 Super class)
+- 继承: 子类获得了父类的全部功能; 子类可以新增自己的方法; 子类可以重写父类的方法
+
+```python
+class Animal:
+    def run(self):
+        print("Animal is running")
+
+class Dog(Animal):
+    def run(self):
+        print("Dog is running")
+```
+
+- 多态: 同一个方法名; 不同子类可以有不同实现; 调用时会根据实际对象执行对应的方法
+- 多态好处: 当需要传入子类的一些变量时, 只需要接收父类数据类型就行, 这样不需要修改依赖父类的一些函数
+
+
+
+
+
