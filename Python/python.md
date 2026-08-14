@@ -68,9 +68,9 @@
 
 ```python
 age = 20
-if age >= 6:
+if age >= 18:
     print('teenager')
-elif age >= 18:
+elif age >= 6:
     print('adult')
 else:
     print('kid')
@@ -242,6 +242,8 @@ def person(name, age, **kw):
 >>> person('Michael', 30)
 name: Michael age: 30 other: {}
 ```
+
+- 日期: 2026.8.14
 
 # 4 高级特性
 
