@@ -27,7 +27,9 @@
 - Definition: Linear regression is a supervised learning model that predicts numbers as the output.
 - 定义: 线性回归是一种监督学习模型，通过线性函数对输入特征进行建模，用于预测连续的数值输出
 
-
+## Cost Function 代价函数
+- Definition: A cost function measures how well a machine learning model is performing by measuring the difference between its predictions and the actual values.
+- 定义: 代价函数用于衡量机器学习模型的预测效果，通过计算模型预测值与真实值之间的差异来评价模型的性能
 
 
 
