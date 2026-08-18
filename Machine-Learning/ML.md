@@ -7,14 +7,14 @@
 
 - Supervised learning / Unsupervised learning
 
-# Supervised learning
+## Supervised learning
 - Supervised learning: Learns from being given "right answers"
 
 - Regression: Predict a number infinitely many possible outputs
 
 - Classification: Predict categories, small number of possible outputs
 
-# Unsupervised learning
+## Unsupervised learning
 - Unsupervised learning: Find something interesting in unlabeled data
 
 - Clustering: Group similar data points together
@@ -30,6 +30,9 @@
 ## Cost Function 代价函数
 - Definition: A cost function measures how well a machine learning model is performing by measuring the difference between its predictions and the actual values.
 - 定义: 代价函数用于衡量机器学习模型的预测效果，通过计算模型预测值与真实值之间的差异来评价模型的性能
+- J 用于衡量平方误差有多大的代价函数
 
+- date: 2026.8.18
 
+- 线性回归的目标: 寻找参数w和b使得代价函数J达到最小值
 
