@@ -80,3 +80,43 @@
 - Definition: Polynomial regression is a form of linear regression that uses polynomial features, such as $x^2$, $x^3$, and higher-order terms, to model nonlinear relationships between features and the target.
 - 定义: 多项式回归是在线性回归中加入 $x^2$、$x^3$ 等多项式特征，从而使模型能够拟合输入特征与目标值之间非线性关系的方法
 
+- 日期: 2026.8.20
+
+# 5. Logistic Regression 逻辑回归
+- Definition: Logistic Regression is a supervised learning algorithm used for classification that models the probability that an input belongs to a particular class.
+- 定义: 逻辑回归是一种用于分类问题的监督学习算法，它通过将输入特征的线性组合输入 Logistic（Sigmoid）函数，来估计样本属于某一类别的概率
+
+## Decision Boundary 决策边界
+- Definition: A decision boundary is the boundary that separates regions of the input space assigned to different classes by a classification model.
+- 定义: 决策边界是分类模型在输入空间中用于划分不同类别区域的边界
+
+## Logistic loss function 损失函数
+- Definition: The loss function measures how well the logistic regression model predicts the true label of a single training example. For binary classification, logistic regression uses the log loss (binary cross-entropy loss).
+- 定义: 逻辑回归的损失函数用于衡量模型对单个训练样本预测结果与真实标签之间的误差。对于二分类问题，逻辑回归通常使用对数损失（Log Loss），也称二元交叉熵损失（Binary Cross-Entropy Loss）
+
+## Gradient descent for logistic regression 梯度下降
+类似线性回归的概念: 
+- Gradient descent
+- Vectorization 
+- Feature Scaling 
+
+## Overfit / Underfit 过拟合 / 欠拟合
+- Overfit <-> high variance  underfit <-> high bias
+- 过拟合: 指模型对训练数据拟合得过于充分，甚至学习了其中的噪声和无关模式，从而导致模型在未见过的新数据上表现较差
+- 欠拟合: 指模型过于简单，无法充分学习训练数据中的基本规律，因此在训练数据和未见过的新数据上都表现较差
+
+## 解决过拟合的方法
+- Collect more training examples 更多的数据集
+- Select features to include/exclude 减少特征选择
+- Regularization 正则化 (通常 Reduce the size of parameters $w_j$)
+
+## Regularization 正则化
+- Definition: Regularization is a technique used to reduce overfitting by adding a penalty term to the cost function, discouraging excessively large model parameters and helping the model generalize better to unseen data.
+- 定义: 正则化是一种用于减少过拟合的技术，通过在代价函数中加入惩罚项，限制模型参数过大，从而降低模型复杂度并提高对未见数据的泛化能力
+- 正则化的代价函数
+- 正则化的线性回归的梯度下降
+ - 扩: 正则化的数学原理, 数学推导(移项, $w_j$每次乘一个小于1的数(限制))
+- 正则化的逻辑回归的梯度下降
+
+
+

@@ -32,18 +32,25 @@ Machine Learning
 │       └── Polynomial Regression 多项式回归
 │  
 ├── Logistic Regression 逻辑回归
-│   ├── 
-│   └── 
-│   ├── 
-│   └── 
-│   ├── 
-│   └── 
-│   ├── 
-│   └── 
-│   ├── 
-│   └──
-│   ├── 
-│   └── 
+│   ├── Model 模型
+│   │   ├── Logistic Regression definition
+│   │   ├── Sigmoid Function
+│   │   ├── Decision Boundary 决策边界
+│   │   └── Loss Function / Cost Function 损失函数 / 代价函数
+│   │
+│   ├── Optimization 优化
+│   │   ├── Gradient Descent 梯度下降
+│   │   └── Learning Rate 学习率
+│   │
+│   ├── Multiple Features 多特征
+│   │   ├── Vectorization 向量化
+│   │   └── Feature Scaling 特征缩放
+│   │
+│   └── Generalization 泛化
+│       ├── Overfitting / Underfitting 过拟合 / 欠拟合
+│       └── Regularization 正则化
+│   
+
 
 
 
