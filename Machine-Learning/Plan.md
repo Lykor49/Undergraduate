@@ -52,5 +52,27 @@ Machine Learning
 │   
 
 
-
-
+Deep Learning
+├── Neural Networks 神经网络
+│   ├── Model 模型
+│   │   ├── Neural Network definition
+│   │   ├── Neuron / Layer 神经元 / 层
+│   │   ├── Neural Network Architecture 网络结构
+│   │   └── Forward Propagation 前向传播
+│   │
+│   ├── Activation Function 激活函数
+│   │   ├── Sigmoid
+│   │   ├── ReLU
+│   │   └── Linear Activation
+│   │
+│   ├── Training 训练
+│   │   ├── Loss Function / Cost Function 损失函数 / 代价函数
+│   │   ├── Backpropagation 反向传播
+│   │   └── Gradient Descent 梯度下降
+│   │
+│   ├── Multiclass Classification 多分类
+│   │   ├── Softmax
+│   │   └── Cross-Entropy Loss 交叉熵损失
+│   │
+│   └── Optimization 优化
+│       └── Adam Optimizer

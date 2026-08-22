@@ -119,4 +119,15 @@
 - 正则化的逻辑回归的梯度下降
 
 
+日期: 2026.8.22
+
+# 6. Neural Networks 神经网络
+- Definition: A neural network is a machine learning model composed of interconnected layers of computational units called neurons, which learn hierarchical representations from data by applying weighted linear transformations followed by nonlinear activation functions.
+- 定义: 神经网络（Neural Network）是一类由多层相互连接的计算单元（神经元）组成的机器学习模型，通过对输入进行加权线性变换并结合非线性激活函数，从数据中学习分层特征表示
+
+## Forward Propagation 前向传播
+- Definition: Forward propagation is the process of passing input data through the layers of a neural network, from the input layer to the output layer, by computing weighted sums and applying activation functions to produce the final prediction.
+- 定义: 指输入数据从神经网络的输入层开始，逐层经过加权求和与激活函数计算，最终传递到输出层并得到模型预测结果的过程
+
+
 
