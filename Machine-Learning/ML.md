@@ -129,5 +129,39 @@
 - Definition: Forward propagation is the process of passing input data through the layers of a neural network, from the input layer to the output layer, by computing weighted sums and applying activation functions to produce the final prediction.
 - 定义: 指输入数据从神经网络的输入层开始，逐层经过加权求和与激活函数计算，最终传递到输出层并得到模型预测结果的过程
 
+# 7. Activation Function 激活函数
+- Definition: An activation function is a function applied to a neuron's weighted input to produce its output, typically introducing nonlinearity into a neural network
+- 定义: 是作用于神经元加权输入上的函数，用于生成神经元的输出，并通常为神经网络引入非线性
+- binary classification -> sigmoid; regression (y negative / positive) -> linear; regression (y >= 0) -> relu
 
+# 8. Multiclass Classification 多分类
+- Definition: Multiclass classification is a classification task in which each input is assigned to one of three or more possible classes.
+- 定义: 指将每个输入样本划分到三个或三个以上候选类别中的一个类别的分类任务
 
+## Softmax
+- Definition: Softmax is a function that converts a vector of real-valued scores into a probability distribution over multiple classes, where each output lies between 0 and 1 and all outputs sum to 1.
+- 定义: Softmax 是一种将一组实数得分转换为多个类别上的概率分布的函数，其中每个输出值都在 0 到 1 之间，并且所有输出概率之和为 1
+
+## Crossentropy 交叉熵损失
+- Definition: Cross-entropy loss is a loss function that measures the difference between the true probability distribution and the probability distribution predicted by a classification model.
+- 定义: 是一种用于衡量真实概率分布与分类模型预测概率分布之间差异的损失函数
+
+# 9. Adam: Adaptive Moment estimation 自适应动量估计
+- Definition: Adam (Adaptive Moment Estimation) is an optimization algorithm that adaptively adjusts the learning rate for each parameter using estimates of the first and second moments of the gradients.
+- 定义: Adam（Adaptive Moment Estimation，自适应矩估计）是一种优化算法，它利用梯度的一阶矩和二阶矩估计，为每个模型参数自适应地调整学习率
+
+# 10. Machine Learning Diagnostic 模型评估
+- Diagnostic: A test used to identify problems in a learning algorithm and guide performance improvement.
+
+- 将数据集分为训练集(training set)和测试集(test set), 分别观察训练集和验证集的loss
+$J_{\mathrm{test}}(\mathbf{w}, b)$ is a better estimate of how well the model will generalize to new data than $J_{\mathrm{train}}(\mathbf{w}, b)$.
+
+- 优化: 将数据集分为训练集(training set)、交叉验证集(Cross validation set)和测试集(test set)
+
+- 分析: high bias / high variance
+
+- 分析: regularization parameters
+
+- 建立表现基准: Baseline performance and training error -> high bias; training error and cross validation error -> high variance
+
+- 学习曲线 Learning Curves: high bias / high variance 学习曲线
