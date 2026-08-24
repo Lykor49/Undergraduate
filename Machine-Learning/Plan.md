@@ -49,7 +49,13 @@ Machine Learning
 │   └── Generalization 泛化
 │       ├── Overfitting / Underfitting 过拟合 / 欠拟合
 │       └── Regularization 正则化
-│   
+│  
+├── Machine Learning Development 机器学习开发
+│   ├── Iterative Development 迭代开发
+│   ├── Error Analysis 误差分析
+│   ├── Data augmentation 数据增强
+│   ├── Transfer Learning 迁移学习
+│   └── Machine Learning Project Cycle 机器学习项目完整周期
 
 
 Deep Learning
@@ -74,5 +80,12 @@ Deep Learning
 │   │   ├── Softmax
 │   │   └── Cross-Entropy Loss 交叉熵损失
 │   │
-│   └── Optimization 优化
-│       └── Adam Optimizer
+│   ├── Optimization 优化
+│   │   └── Adam Optimizer
+│   │
+│   ├── Diagnostic 评价
+│   │   └── Precision / Recall / F1 score
+
+
+
+

@@ -165,3 +165,43 @@ $J_{\mathrm{test}}(\mathbf{w}, b)$ is a better estimate of how well the model wi
 - 建立表现基准: Baseline performance and training error -> high bias; training error and cross validation error -> high variance
 
 - 学习曲线 Learning Curves: high bias / high variance 学习曲线
+
+# 11. Precision / Recall / F1 score
+
+## Precision 精确率（查准率）
+- 定义：精确率是指模型预测为正类的样本中，实际为正类的样本所占的比例
+
+$$
+\mathrm{Precision}
+=
+\frac{TP}{TP+FP}
+$$
+
+## Recall 召回率（查全率）
+- 定义：召回率是指所有实际为正类的样本中，被模型正确预测为正类的样本所占的比例。
+
+$$
+\mathrm{Recall}
+=
+\frac{TP}{TP+FN}
+$$
+
+## F1 Score
+- 定义：F1 Score 是 Precision（精确率）和 Recall（召回率）的调和平均数，用于综合衡量模型在精确率和召回率之间的表现。
+
+$$
+F_1
+=
+2\cdot
+\frac{\mathrm{Precision}\cdot\mathrm{Recall}}
+{\mathrm{Precision}+\mathrm{Recall}}
+$$
+也可以写成：
+$$
+F_1
+=
+\frac{2TP}{2TP+FP+FN}
+$$
+
+
+
