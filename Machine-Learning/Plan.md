@@ -56,6 +56,26 @@ Machine Learning
 │   ├── Data augmentation 数据增强
 │   ├── Transfer Learning 迁移学习
 │   └── Machine Learning Project Cycle 机器学习项目完整周期
+│
+├── Decision Trees 决策树
+│   ├── Model 模型
+│   │   ├── Decision Tree definition
+│   │   └── Node / Branch / Leaf 节点 / 分支 / 叶节点
+│   │
+│   ├── Learning 学习过程
+│   │   ├── Entropy 熵 / Purity 纯度
+│   │   ├── Information Gain 信息增益
+│   │   └── Splitting Criterion 分裂准则
+│   │
+│   ├── Features 特征处理
+│   │   ├── Categorical Features 类别特征
+│   │   │   └── One-Hot Encoding 独热编码
+│   │   └── Continuous Features 连续特征
+│   │
+│   └── Tree Ensembles 树集成
+│       ├── Bagging / Sampling with Replacement
+│       ├── Random Forest 随机森林
+│       └── XGBoost
 
 
 Deep Learning

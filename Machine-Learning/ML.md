@@ -171,37 +171,105 @@ $J_{\mathrm{test}}(\mathbf{w}, b)$ is a better estimate of how well the model wi
 ## Precision 精确率（查准率）
 - 定义：精确率是指模型预测为正类的样本中，实际为正类的样本所占的比例
 
-$$
+$
 \mathrm{Precision}
 =
 \frac{TP}{TP+FP}
-$$
+$
 
 ## Recall 召回率（查全率）
 - 定义：召回率是指所有实际为正类的样本中，被模型正确预测为正类的样本所占的比例。
 
-$$
+$
 \mathrm{Recall}
 =
 \frac{TP}{TP+FN}
-$$
+$
 
 ## F1 Score
 - 定义：F1 Score 是 Precision（精确率）和 Recall（召回率）的调和平均数，用于综合衡量模型在精确率和召回率之间的表现。
 
-$$
+$
 F_1
 =
 2\cdot
 \frac{\mathrm{Precision}\cdot\mathrm{Recall}}
 {\mathrm{Precision}+\mathrm{Recall}}
-$$
+$
+
 也可以写成：
-$$
+
+$
 F_1
 =
 \frac{2TP}{2TP+FP+FN}
-$$
+$
+
+
+# 12. Decision Tree 决策树
+- Definition: Decision tree is a supervised learning model that makes predictions by recursively splitting the data based on feature values, forming a tree-like structure of decision nodes and leaf nodes.
+- 定义: 决策树（Decision Tree）是一种监督学习模型，它根据特征取值对数据进行递归划分，并形成由决策节点和叶节点组成的树状结构，从而完成分类或回归预测
+- 决策 Decision 1: How to choose what feature to split on at each other?
+- 决策 Decision 2: When do you stop splitting?
+ 
+## Entropy 熵
+- 定义: Entropy（熵）是用来衡量一个节点中样本“混乱程度 / 不纯度”的指标
+
+$
+H(p_1)
+=
+-p_1\log_2(p_1)
+-p_0\log_2(p_0)
+$
+
+$
+H(p)
+=
+-p\log_2(p)
+-(1-p)\log_2(1-p)
+$
+
+## Information gain 信息增益 (熵的减少)
+- Definition: Information gain measures the reduction in entropy after splitting a dataset on a feature.
+- 定义: 信息增益（Information Gain）用于衡量按照某个特征对数据进行划分后，数据集熵减少的程度
+
+$
+\text{Information Gain}
+=
+H(p_1^{\text{root}})
+-
+\left(
+w^{\text{left}}H(p_1^{\text{left}})
++
+w^{\text{right}}H(p_1^{\text{right}})
+\right)
+$
+
+其中：
+
+- $H(p_1^{\text{root}})$：划分前根节点的熵
+- $H(p_1^{\text{left}})$：左子节点的熵
+- $H(p_1^{\text{right}})$：右子节点的熵
+- $w^{\text{left}}$：左子节点样本所占比例
+- $w^{\text{right}}$：右子节点样本所占比例
+
+
+## One-Hot Encoding 独热编码
+- Definition: One-hot encoding is a technique for representing categorical variables as binary vectors, where each category corresponds to one dimension, with one element set to 1 and all other elements set to 0.
+- 定义: 独热编码（One-Hot Encoding）是一种将类别变量表示为二进制向量的方法，其中每个类别对应一个维度，该类别对应的位置取 1，其余位置取 0
+
+
+# 13. Tree Ensembles 树集成
+
+## Random Forest 随机森林
+- Definition: Random Forest is an ensemble learning algorithm that constructs multiple decision trees using bootstrap samples and random subsets of features, and combines their predictions to improve generalization and reduce overfitting.
+- 定义: 随机森林（Random Forest）是一种集成学习算法，它通过对训练数据进行有放回抽样，并在每次节点划分时随机选择部分特征来构建多棵决策树，最后综合这些决策树的预测结果，以提高模型的泛化能力并降低过拟合风险
+
+## XGBoost (Extreme Gradient Boosting) 极端梯度提升
+- Definition: XGBoost is an optimized and scalable gradient boosting algorithm that builds an ensemble of decision trees sequentially, with each new tree learning to correct the errors made by the previous trees.
+- 定义: XGBoost（Extreme Gradient Boosting）是一种经过优化的梯度提升集成学习算法，它按照顺序构建多棵决策树，使后续的树不断学习并修正之前模型的预测误差，最终将所有树的结果组合得到预测
+
+
 
 
 
