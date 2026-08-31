@@ -76,6 +76,37 @@ Machine Learning
 │       ├── Bagging / Sampling with Replacement
 │       ├── Random Forest 随机森林
 │       └── XGBoost
+│ 
+├── Unsupervised Learning 无监督学习
+│   ├── Clustering 聚类
+│   │   ├── Clustering definition
+│   │   ├── K-Means Clustering K均值聚类
+│   │   ├── Optimization Objective 优化目标
+│   │   ├── Initializing K-Means K均值初始化
+│   │   └── Choosing Number of Clusters 聚类数量选择
+│   │
+│   └── Anomaly Detection 异常检测
+│       ├── Anomaly Detection definition
+│       ├── Gaussian Distribution 高斯分布
+│       ├── Evaluation 异常检测评估
+│       ├── Anomaly Detection vs Supervised Learning
+│       └── Feature Selection 特征选择
+│
+└── Recommender Systems 推荐系统 (暂时跳过)
+    ├── Collaborative Filtering 协同过滤
+    │   ├── Collaborative Filtering definition
+    │   ├── User / Item Features 用户 / 商品特征
+    │   ├── Collaborative Filtering Algorithm 协同过滤算法
+    │   └── Binary Labels 二值标签
+    │
+    ├── Implementation 实现
+    │   ├── Mean Normalization 均值归一化
+    │   └── Finding Related Items 查找相似项目
+    │
+    └── Content-Based Filtering 基于内容的过滤
+        ├── Content-Based Filtering definition
+        ├── Collaborative Filtering vs Content-Based Filtering
+        └── Deep Learning for Content-Based Filtering
 
 
 Deep Learning
@@ -103,9 +134,38 @@ Deep Learning
 │   ├── Optimization 优化
 │   │   └── Adam Optimizer
 │   │
-│   ├── Diagnostic 评价
-│   │   └── Precision / Recall / F1 score
+└───├── Diagnostic 评价
+        └── Precision / Recall / F1 score
 
 
-
-
+Reinforcement Learning 强化学习
+├── Basic Concepts 基本概念
+│   ├── Reinforcement Learning definition
+│   ├── Agent / Environment 智能体 / 环境
+│   ├── State 状态
+│   ├── Action 动作
+│   ├── Reward 奖励
+│   └── Policy 策略
+│
+├── Return 回报
+│   ├── Return definition
+│   ├── Discount Factor 折扣因子
+│   └── Discounted Return 折扣回报
+│
+├── Value Function 价值函数
+│   ├── State-Action Value Function Q(s,a)
+│   ├── Bellman Equation 贝尔曼方程
+│   └── Stochastic Environment 随机环境
+│
+├── Q-Learning Q学习
+│   ├── Q-Learning Algorithm
+│   ├── Exploration / Exploitation 探索 / 利用
+│   └── ε-Greedy Policy ε-贪婪策略
+│
+└── Deep Reinforcement Learning 深度强化学习
+    ├── Continuous State Space 连续状态空间
+    ├── Neural Network Approximation 神经网络近似
+    ├── Deep Q-Network (DQN)
+    ├── Experience Replay 经验回放
+    ├── Mini-Batch 小批量训练
+    └── Soft Update 软更新

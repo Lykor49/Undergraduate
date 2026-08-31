@@ -269,6 +269,21 @@ $
 - Definition: XGBoost is an optimized and scalable gradient boosting algorithm that builds an ensemble of decision trees sequentially, with each new tree learning to correct the errors made by the previous trees.
 - 定义: XGBoost（Extreme Gradient Boosting）是一种经过优化的梯度提升集成学习算法，它按照顺序构建多棵决策树，使后续的树不断学习并修正之前模型的预测误差，最终将所有树的结果组合得到预测
 
+- 日期: 2026.8.31
+
+# 14. Clustering 聚类
+- Definition: Clustering is an unsupervised learning technique that groups data points into clusters so that points within the same cluster are more similar to each other than to points in different clusters.
+- 定义: 聚类（Clustering）是一种无监督学习方法，它根据数据之间的相似性将数据划分为若干簇，使同一簇中的数据彼此更加相似，而不同簇之间的数据差异更大
+
+## K-means 聚类
+- Definition: K-Means is an unsupervised clustering algorithm that partitions a dataset into K clusters by assigning each data point to the nearest cluster centroid and iteratively updating the centroids to minimize the within-cluster sum of squared distances.
+- 定义: K-Means（K均值聚类）是一种无监督聚类算法，它将数据划分为 K 个簇，通过把每个样本分配给距离最近的簇中心，并不断更新簇中心，使簇内样本到各自簇中心的平方距离之和最小
+
+# 15. Anomaly Detection 异常检测
+- Definition: Anomaly detection is an unsupervised learning technique used to identify data points or observations that significantly deviate from the normal pattern of the data.
+- 定义: 异常检测（Anomaly Detection）是一种无监督学习方法，用于识别与数据正常模式显著不同的数据点或观测样本
+
+
 
 
 
