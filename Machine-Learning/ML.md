@@ -283,8 +283,16 @@ $
 - Definition: Anomaly detection is an unsupervised learning technique used to identify data points or observations that significantly deviate from the normal pattern of the data.
 - 定义: 异常检测（Anomaly Detection）是一种无监督学习方法，用于识别与数据正常模式显著不同的数据点或观测样本
 
+- 日期: 2026.9.1
 
+# 16. Reinforcement Learning 强化学习
+- Definition: Reinforcement learning is a machine learning paradigm in which an agent learns how to make decisions by interacting with an environment and receiving rewards, with the goal of maximizing the expected cumulative reward over time.
+- 定义: 强化学习（Reinforcement Learning）是一种机器学习范式，其中智能体（Agent）通过与环境（Environment）不断交互并获得奖励（Reward），学习如何采取动作（Action），其目标是最大化长期累积奖励的期望
 
+- State、Action、Reward、Return
 
+- Markov Decision Process (MDP) 马尔可夫决策过程
+
+- Bellman Equation 贝尔曼方程
 
 
