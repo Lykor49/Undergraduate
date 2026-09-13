@@ -67,5 +67,67 @@ Two Policy
 
 
 # 第 2 课 - Bellman Equation 贝尔曼公式
+
+## Importance of return
 - Return 非常重要, 可以用来评估策略; Calculating return is important to evaluate a policy.
+
+- Boostrapping 自举法: 用当前已有的估计值，去更新另一个估计值
+- The value of one state relies on the values of other states
+
+- Bellman Equation 贝尔曼公式
+
+## State Value 状态价值
+- State Value 状态价值: The expectation (or called expected value or mean) of Gt is defined as the state-value function or simply state value.
+
+## Bellman equation: Derivation 贝尔曼公式推导
+- Bellman Equation 介绍: In a word, the Bellman equation describes the relationship among the values of all states.
+
+- Bellman Equation 总结: 一个状态的价值等于当前期望即时奖励与下一状态期望价值的折扣之和, 描述不同State Value 之间的关系
+
+
+## Matrix-vector form of the Bellman equation 矩阵-向量形式的贝尔曼方程
+
+
+## Action Value 动作价值
+
+
+# 第 3 课 - Bellman optimality equation(BOE)
+
+## Optimal Policy 最优策略
+- 如果一个策略在所有状态下的 State Value 都不低于其他任意策略，它就是最优策略
+
+## Optimal State Value 最优状态价值
+- 某个状态在所有策略下能够达到的最大 State Value
+
+## Greedy Policy 贪心策略
+- 在每个状态直接选择 Q Value 最大的 Action
+
+## Fixed Point 不动点
+- 如果经过 Bellman 映射后 Value 不再变化，那么这个 Value 就是不动点
+
+## Contraction Mapping 压缩映射
+- 每次映射都会缩小两个 Value 之间的距离，因此不断迭代会趋向唯一解
+
+# 第 4 课 - Value Iteration & Policy Iteration
+
+## Value Iteration Algorithm
+
+
+# 第 5 课 - Monte Carlo Learning 蒙特卡洛方法
+
+## Monte Carlo Estimation 
+
+- 补充: 大数定理 Law of Large Numbers
+
+
+## MC Basic
+
+
+## MC Exploring Starts
+
+
+## MC ε-Greedy
+
+- Soft policy
+
 

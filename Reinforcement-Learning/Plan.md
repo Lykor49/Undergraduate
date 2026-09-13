@@ -12,14 +12,15 @@ Reinforcement-Learning
 │   └── Markov decision process (MDP) 马尔可夫决策过程
 │
 ├── Bellman Equation 贝尔曼公式
-│   ├── Return definition
-│   ├── Discount Factor 折扣因子
-│   └── Discounted Return 折扣回报
+│   ├── State Value 状态价值
+│   ├── Action Value 动作价值
+│   ├── Bellman Equation (elementwise form)
+│   └── Bellman Equation (matrix-vector form)
 │
 ├── Bellman Optimality Equation 贝尔曼最优公式
-│   ├── State-Action Value Function Q(s,a)
-│   ├── Bellman Equation 贝尔曼方程
-│   └── Stochastic Environment 随机环境
+│   ├── Optimal state value
+│   ├── Optimal policy
+│   └── Bellman Optimality Equation (BOE)
 │
 ├── Value Iteration & Policy Iteration 值迭代 & 策略迭代
 │   ├── Q-Learning Algorithm
