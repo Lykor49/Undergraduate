@@ -130,4 +130,41 @@ Two Policy
 
 - Soft policy
 
+# 第 6 课 - Stochastic Approximation and Stochastic Gradient Descent 
+
+## Stochastic Approximation 随机近似
+- 当目标函数/期望无法精确获得时，用带噪声的采样结果反复迭代，逐渐逼近真实解
+
+## Robbins–Monro (RM)
+- 我不知道真实 g(w)，只能得到一个 noisy observation，但我还是可以不断修正 w，最终逼近根 w*
+
+## Stochastic Gradient Descent 随机梯度下降
+- GD、BGD、SGD
+
+
+
+
+- 日期: 2026.9.17 梳理
+
+- 基本概念 -> 贝尔曼公式 -> 贝尔曼最优公式 -> 值迭代和策略迭代 -> 蒙特卡洛方法 -> 随机近似方法
+-> 时序差分方法 -> 值函数方法 -> 策略梯度方法 -> 演员-评论家方法
+
+1. 基本概念
+- State
+- Action
+- Reward
+- Policy
+- Trajectory
+- Return
+- MDP
+
+2. 贝尔曼公式
+- Bellman Equation
+- 给定一个Policy评价它好坏
+
+3. 贝尔曼最优公式
+- Bellman Optimality Equation
+- 描述最优的Value / Policy
+
+4. 值迭代和策略迭代
 

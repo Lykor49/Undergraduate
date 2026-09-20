@@ -23,39 +23,42 @@ Reinforcement-Learning
 │   └── Bellman Optimality Equation (BOE)
 │
 ├── Value Iteration & Policy Iteration 值迭代 & 策略迭代
-│   ├── Q-Learning Algorithm
-│   ├── Exploration / Exploitation 探索 / 利用
-│   └── ε-Greedy Policy ε-贪婪策略
+│   ├── 
+│   ├── 
+│   └── 
 │
 ├── Monte Carlo Learning 蒙特卡洛方法
-│   ├── Q-Learning Algorithm
-│   ├── Exploration / Exploitation 探索 / 利用
-│   └── ε-Greedy Policy ε-贪婪策略
+│   ├── 
+│   ├── 
+│   └── 
 │
-├── Stochastic Approximation
-│   ├── Q-Learning Algorithm
-│   ├── Exploration / Exploitation 探索 / 利用
-│   └── ε-Greedy Policy ε-贪婪策略
+├── Stochastic Approximation and Stochastic Gradient Descent 随机近似与随机梯度下降
+│   ├── Monte Carlo Approximation -> Incremental Approximation 增量式估计
+│   ├── Robbins-Monro Algorithm 罗宾斯-门罗算法 (RM)
+│   └── 
 │
 ├── Temporal-Difference Learning 时序差分方法
-│   ├── Q-Learning Algorithm
-│   ├── Exploration / Exploitation 探索 / 利用
-│   └── ε-Greedy Policy ε-贪婪策略
+│   ├── 
+│   ├── 
+│   └── 
 │
-├── Value Function Approximation
-│   ├── Q-Learning Algorithm
-│   ├── Exploration / Exploitation 探索 / 利用
-│   └── ε-Greedy Policy ε-贪婪策略
+├── Value Function Approximation 值函数估计
+│   ├── 
+│   ├── 
+│   └── 
 │
-├── Policy Gradient Methods
-│   ├── Q-Learning Algorithm
-│   ├── Exploration / Exploitation 探索 / 利用
-│   └── ε-Greedy Policy ε-贪婪策略
+├── Policy Gradient 策略梯度
+│   ├── Policy-based 基于策略的 (从表格到函数 -> 引出函数表示策略)
+│   ├── Metric of define optimal policy 定义最优策略的目标函数 (平均状态值、平均奖励)
+│   ├── Gradient of metric 目标函数的梯度
+│   └── Monte Carlo policy gradient 蒙特卡洛策略梯度 (REINFORCE)
 │
 ├── Actor-Critic Methods
-│   ├── Q-Learning Algorithm
-│   ├── Exploration / Exploitation 探索 / 利用
-│   └── ε-Greedy Policy ε-贪婪策略
+│   ├── 
+│   ├── 
+│   └── 
+
+
 
 
 
