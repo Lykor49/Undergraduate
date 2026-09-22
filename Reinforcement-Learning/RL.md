@@ -15,25 +15,23 @@
 - 日期: 2026.9.9
 
 # 第 1 课 - 基本概念 (State, Action, Policy等)
+- 智能体的任务是从一个初始区域出发, 最终达到目标区域 (针对例子而言)
 
 ## State 状态
-- State 状态: The status of the agent with respect to the environment.
-- State space 状态空间: The set of all states S.
+- State 状态: 描述了智能体与环境的相对状况
+- State space 状态空间: 所有状态的集合 S
 
 ## Action 动作
 - Action 动作: For each state, there are many possible actions.
-- Action space of a state 动作空间: the set of all possible actions of a state.
+- Action space 动作空间: 所有动作的集合 A
 
 ## State transition 状态转移
-- State transition 状态转移: When taking an action, the agent may move from one state to another.
-- State transition describes the interaction with the environment.
-
-- Tabular representation 表格表示: We can use a table to describe the state transition.(Can only represent deterministic cases.)
-
-- State transition probability 状态转移概率: use probability to describe state transition!
+- State transition 状态转移: 当执行一个动作时, 智能体可能从一个状态转移到另一个状态
+- 每一个状态的每一个动作都会对应一个状态转移过程
+- 表格法: 只能描述确定性的状态转移过程; 条件概率分布: 描述随机性的状态转移过程
 
 ## Policy 策略
-- Policy tells the agent what actions to take in a state.
+- Policy 策略: 告诉智能体在每一个状态应该采取什么样的动作
 
 Policy representation
 - Intuitive representation 直观表示: We use arrows to describe a policy.
@@ -43,28 +41,31 @@ Two Policy
 - Deterministic policy 确定性策略: For a given state s, the policy always selects the same action a.
 - Stochastic policy 随机策略: For a given state s, the policy defines a probability distribution over possible actions.
 
-
-- 日期: 2026.9.10
-
 ## Reward 奖励
-- Reward 奖励: a real number we get after taking an action.
-- A positive reward represents encouragement to take such actions.
-- A negative reward represents punishment to take such actions.
+- Reward 奖励: 在一个状态执行一个动作后, 智能体会获得奖励r
+- 正的奖励表示我们鼓励智能体采取相应的动作; 负的奖励表示我们不鼓励智能体采取该动作
 
 ## Trajectory and return 轨迹和回报
-- Trajectory 轨迹: A trajectory is a state-action-reward chain.
-- Return 回报: The return of this trajectory is the sum of all the rewards collected along the trajectory.
+- Trajectory 轨迹: 指的是一个 “状态-动作-奖励” 的链条
+
+- Return 回报: 沿着一条轨迹, 智能体会得到一系列的即时奖励, 这些即时奖励之和称为回报
+- 回报由即时奖励(immediate reward)和未来奖励(future reward)组成
+- 回报可以用于评价一个策略的 “好坏”
+
+- Discounted Return 折扣回报: 不同时刻得到的奖励添加相应的折扣再求和
+- 用处1: 轨迹可能是无限长的, 不用担心回报会发散到无穷
+- 用处2: 折扣因子可以用来调整对近期或远期奖励的重视程度 
 
 - Discount rate 折扣因子: 计算Return时, 用来降低未来Reward权重的系数
 - 概括: 折扣因子决定A1在评价一个动作时, 对未来运动结果看得有多远、看得有多重
 
 ## Episode 回合
-- Episode 回合: When interacting with the environment following a policy, the agent may stop at some terminal states. The resulting trajectory is called an episode. 
+- Episode 回合: 智能体从初始状态开始到终止状态停止的过程
 
 ## Markov decision process (MDP) 马尔可夫决策过程
 - MDP 定义: 智能体在一个环境中，根据当前状态选择动作，环境随后转移到新的状态并给予奖励，智能体不断重复这一过程，以最大化长期累计回报。
-- Markov Property 马尔可夫性质: 在给定当前状态的条件下，未来与过去的完整历史无关。
-
+- Markov Property 马尔可夫性质: 在给定当前状态的条件下，未来与过去的完整历史无关。表示下一个状态和奖励仅依赖于当前时刻的状态和动作, 而与之前时刻的状态和动作无关
+- Markov process 马尔可夫过程: 马尔可夫过程是满足马尔可夫性质的随机过程，即未来状态的概率分布只依赖于当前状态，而不依赖于过去的历史状态
 
 # 第 2 课 - Bellman Equation 贝尔曼公式
 

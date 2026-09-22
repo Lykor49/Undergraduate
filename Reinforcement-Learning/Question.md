@@ -11,6 +11,21 @@ Ans: State value: the average return the agent can get starting from a state.
 taking an action.
 
 
+## 第 1 章 基本概念
+1. 奖励为正数一定代表鼓励, 奖励为负数一定代表惩罚吗? 
+
+
+
+2. 奖励是下一个状态的函数吗? 
+
+
+
+
+
+
+
+
+
 
 - 问题
 
