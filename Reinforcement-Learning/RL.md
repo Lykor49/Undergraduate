@@ -68,29 +68,33 @@ Two Policy
 - Markov process 马尔可夫过程: 马尔可夫过程是满足马尔可夫性质的随机过程，即未来状态的概率分布只依赖于当前状态，而不依赖于过去的历史状态
 
 # 第 2 课 - Bellman Equation 贝尔曼公式
-
-## Importance of return
-- Return 非常重要, 可以用来评估策略; Calculating return is important to evaluate a policy.
-
-- Boostrapping 自举法: 用当前已有的估计值，去更新另一个估计值
-- The value of one state relies on the values of other states
-
-- Bellman Equation 贝尔曼公式
+- 状态值 可以作为评价一个策略好坏的指标
+- 贝尔曼方程 描述了所有状态值之间的关系; 求解贝尔曼方程 可以得到状态值 进而评价一个策略的好坏
+- Boostrapping 自举法: 利用已有的价值估计（Value Estimate），来更新当前状态或动作的价值估计
+- 自举的思想: v1, v2, v3, v4 可以从其自身v2, v3, v4, v1得到
 
 ## State Value 状态价值
-- State Value 状态价值: The expectation (or called expected value or mean) of Gt is defined as the state-value function or simply state value.
+- 引入: 回报不适用于一般化的随机情况, 从一个状态出发可能会得到不同的轨迹和回报, 提出状态值来评价随机情况
+- 定义: 在给定策略 π 下, 智能体从某一状态 s 出发, 该策略所能获得的未来累计折扣奖励（Return）的期望值
+- 公式 (.ipynb)
+- Question1 
 
-## Bellman equation: Derivation 贝尔曼公式推导
-- Bellman Equation 介绍: In a word, the Bellman equation describes the relationship among the values of all states.
+## Bellman equation 贝尔曼公式
+- 引入: 贝尔曼公式 描述了所有状态值之间的关系, 帮助我们计算状态值
+- 定义: 贝尔曼方程描述在给定策略 π 下，当前状态价值与即时奖励及下一状态价值之间的递归关系
+- 定义式, 展开形式, 推导 (.ipynb)
 
-- Bellman Equation 总结: 一个状态的价值等于当前期望即时奖励与下一状态期望价值的折扣之和, 描述不同State Value 之间的关系
-
-
-## Matrix-vector form of the Bellman equation 矩阵-向量形式的贝尔曼方程
-
+## Matrix-vector form of Bellman equation 矩阵-向量形式的贝尔曼方程
+- 引入: 每个状态都有一个 Bellman Equation，将所有状态的方程组合成线性方程组，引出矩阵向量形式
+- 定义: 矩阵形式使用状态价值向量、期望奖励向量和状态转移矩阵，统一表示给定策略下所有状态的价值递归关系
+- 作用: 将 Policy Evaluation 转化为线性方程组的求解问题，为后续迭代策略评价提供数学基础
+- 核心公式, 解析解 (.ipynb)
 
 ## Action Value 动作价值
-
+- 引入: Action Value 来评价具体动作的长期价值
+- 定义: 在一个状态采取一个动作之后获得的回报的期望值
+- 作用: 评价当前状态下各个 Action 的长期价值，为动作选择和 Policy Improvement（策略改进）提供依据
+- 定义式, 核心公式, 与状态值的关系 (.ipynb)
 
 # 第 3 课 - Bellman optimality equation(BOE)
 
