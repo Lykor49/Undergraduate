@@ -67,6 +67,7 @@ Two Policy
 - Markov Property 马尔可夫性质: 在给定当前状态的条件下，未来与过去的完整历史无关。表示下一个状态和奖励仅依赖于当前时刻的状态和动作, 而与之前时刻的状态和动作无关
 - Markov process 马尔可夫过程: 马尔可夫过程是满足马尔可夫性质的随机过程，即未来状态的概率分布只依赖于当前状态，而不依赖于过去的历史状态
 
+
 # 第 2 课 - Bellman Equation 贝尔曼公式
 - 状态值 可以作为评价一个策略好坏的指标
 - 贝尔曼方程 描述了所有状态值之间的关系; 求解贝尔曼方程 可以得到状态值 进而评价一个策略的好坏
@@ -96,22 +97,73 @@ Two Policy
 - 作用: 评价当前状态下各个 Action 的长期价值，为动作选择和 Policy Improvement（策略改进）提供依据
 - 定义式, 核心公式, 与状态值的关系 (.ipynb)
 
+
 # 第 3 课 - Bellman optimality equation(BOE)
+- 强化学习终极目标：寻找最优策略
+- 核心概念：最优状态值 (可以定义最优策略)；核心工具：贝尔曼最优方程
+
 
 ## Optimal Policy 最优策略
-- 如果一个策略在所有状态下的 State Value 都不低于其他任意策略，它就是最优策略
+- 引入：强化学习的目标是寻找能够获得最大长期回报的策略，引入最优策略
+- 定义：如果一个策略 π* 在所有状态下的 State Value 都不小于其他任意策略，则称该策略为最优策略，该最优策略对应的状态值是最优状态值
+- 作用：明确强化学习的最优策略目标，为Bellman Optimality Equation的建立提供基础
+- 定义式 (.ipynb)
+
 
 ## Optimal State Value 最优状态价值
-- 某个状态在所有策略下能够达到的最大 State Value
+- 引入：不同策略在同一状态下可能产生不同的 State Value，因此引入最优状态价值，描述该状态下能够获得的最大期望长期回报
+- 定义：最优状态价值是所有可能策略在状态 s 下所能获得的最大 State Value，即最优策略对应的状态价值
+- 作用：描述每个状态能够达到的最大期望长期回报，为求解最优策略提供依据
+- 定义式 (.ipynb)
+
+
+## Bellman Optimality Equation 贝尔曼最优方程
+- 引入：来求解最优状态价值和最优策略
+- 定义：贝尔曼最优方程描述最优状态价值与即时奖励及下一状态最优价值之间的递归关系
+- 作用：用于刻画和求解最优状态价值与最优策略，为后续 Value Iteration、Policy Iteration 等算法提供数学基础
+- 公式展开形式，Q Value形式 (.ipynb)
+
 
 ## Greedy Policy 贪心策略
-- 在每个状态直接选择 Q Value 最大的 Action
+- 引入：Bellman Optimality Equation需要在所有策略中寻找最大价值，而贪婪策略通过选择 Q Value 最大的动作，实现当前状态下的价值最大化
+- 定义：贪婪策略是指在给定状态下，选择当前动作价值函数 q(s,a) 最大的动作所对应的策略
+- 作用：将 BOE 中对策略的最大化转化为对动作价值的最大化，为最优策略的求解提供依据
+- 公式 (.ipynb)
 
-## Fixed Point 不动点
-- 如果经过 Bellman 映射后 Value 不再变化，那么这个 Value 就是不动点
 
-## Contraction Mapping 压缩映射
-- 每次映射都会缩小两个 Value 之间的距离，因此不断迭代会趋向唯一解
+## 矩阵-向量形式
+- 引入：每个 State 都有一个 Bellman Optimality Equation，将所有状态的方程组合起来，引出矩阵向量形式
+- 定义：贝尔曼最优方程的矩阵向量形式是利用状态价值向量、期望奖励向量和状态转移矩阵，统一表示所有状态的最优价值递归关系
+- 作用：将最优价值求解问题表示为向量方程，为后续的不动点分析、压缩映射和 Value Iteration 提供数学基础
+- 公式（.ipynb）
+
+
+## Contraction Mapping Theorem 压缩映射定理
+1. Fixed Point 不动点
+- 引入：Bellman Optimality Equation 可以写成 v=f(v)，因此可以将求解最优状态价值的问题转化为寻找函数的不动点
+- 定义：如果一个点经过函数 f 映射后仍然等于自身，则称该点为函数 f 的不动点
+- 作用：将贝尔曼最优方程的求解转化为不动点求解问题
+- 公式（.ipynb）
+
+
+2. Contraction Mapping 压缩映射
+- 引入：为了判断反复应用函数 f 能否收敛到不动点，需要研究函数映射前后两点之间的距离变化
+- 定义：如果存在常数 0<γ<1，使任意两点经过函数映射后的距离不超过原距离的 γ 倍，则称函数 f 为压缩映射
+- 作用：保证任意两点经过反复映射后，其距离不断缩小，为证明迭代收敛提供条件
+- 公式 (.ipynb)
+
+3. Contraction Mapping Theorem 压缩映射定理
+- 引入：如果函数 f 具有压缩性质，就可以利用压缩映射定理分析其不动点及迭代过程。
+- 定义：对于实向量空间上的压缩映射 f，存在唯一的不动点 x∗，且从任意初始值 x0 出发，反复应用 f 都会收敛到该不动点。
+- 作用：从数学上保证不动点的存在性、唯一性和迭代收敛性，为后续求解 Bellman Optimality Equation 提供理论依据。
+- 公式 (.ipynb)
+
+
+## Iterative Solution of BOE 贝尔曼最优方程的迭代求解
+- 引入：Bellman Optimality Equation 可以写成 v=f(v)，由于 f(v) 具有压缩性质，因此可以通过反复迭代求得其唯一不动点v∗
+- 定义：从任意初始状态价值向量 v0出发，反复应用 Bellman 最优算子更新价值向量，直至收敛到最优状态价值 v∗；随后根据 v∗选择最大动作价值对应的动作，得到最优策略 π∗
+- 作用：将 Bellman Optimality Equation 转化为可执行的迭代算法，为下一章的 Value Iteration（价值迭代） 奠定基础。
+- 公式（.ipynb）
 
 # 第 4 课 - Value Iteration & Policy Iteration
 
@@ -148,28 +200,4 @@ Two Policy
 
 
 
-
-- 日期: 2026.9.17 梳理
-
-- 基本概念 -> 贝尔曼公式 -> 贝尔曼最优公式 -> 值迭代和策略迭代 -> 蒙特卡洛方法 -> 随机近似方法
--> 时序差分方法 -> 值函数方法 -> 策略梯度方法 -> 演员-评论家方法
-
-1. 基本概念
-- State
-- Action
-- Reward
-- Policy
-- Trajectory
-- Return
-- MDP
-
-2. 贝尔曼公式
-- Bellman Equation
-- 给定一个Policy评价它好坏
-
-3. 贝尔曼最优公式
-- Bellman Optimality Equation
-- 描述最优的Value / Policy
-
-4. 值迭代和策略迭代
 
