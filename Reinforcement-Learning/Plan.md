@@ -12,20 +12,22 @@ Reinforcement-Learning
 │   └── Markov decision process (MDP) 马尔可夫决策过程
 │
 ├── Bellman Equation 贝尔曼公式
-│   ├── State Value 状态价值
-│   ├── Action Value 动作价值
+│   ├── State Value / Action Value
 │   ├── Bellman Equation (elementwise form)
 │   └── Bellman Equation (matrix-vector form)
 │
 ├── Bellman Optimality Equation 贝尔曼最优公式
-│   ├── Optimal state value
-│   ├── Optimal policy
-│   └── Bellman Optimality Equation (BOE)
+│   ├── Optimal policy / Optimal state value
+│   ├── Bellman Optimality Equation (elementwise form)
+│   ├── Bellman Optimality Equation (matrix-vector form)
+│   ├── Greedy Policy
+│   ├── Contraction Mapping Theorem
+│   └── Iterative Solution of BOE
 │
 ├── Value Iteration & Policy Iteration 值迭代 & 策略迭代
-│   ├── 
-│   ├── 
-│   └── 
+│   ├── Value Iteration
+│   ├── Truncated Policy Iteration
+│   └── Policy Iteration
 │
 ├── Monte Carlo Learning 蒙特卡洛方法
 │   ├── 

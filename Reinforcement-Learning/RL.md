@@ -167,7 +167,10 @@ Two Policy
 
 # 第 4 课 - Value Iteration & Policy Iteration
 
-## Value Iteration Algorithm
+## Value Iteration 值迭代
+- 引入：Bellman Optimality Equation 可以通过迭代求解，Value Iteration 从任意初始状态价值 V0 出发，每次根据当前 Value 计算 Q Value，并通过 Greedy 不断更新 Value 和 Policy
+- 定义：根据当前状态价值 Vk 计算所有动作的 q_k(s,a)，选择最大 Q Value 对应的动作形成新的 Greedy Policy，并将最大 Q Value 更新为下一轮状态价值 v_{k+1}，不断迭代直到收敛到 v^*
+- 作用：直接迭代求解 Bellman Optimality Equation，最终得到最优状态价值 v^* 和最优策略 pi^*
 
 
 # 第 5 课 - Monte Carlo Learning 蒙特卡洛方法
