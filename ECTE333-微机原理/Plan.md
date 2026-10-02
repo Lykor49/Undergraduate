@@ -21,27 +21,27 @@
 │        └── Development cycle for C
 │   
 ├── Lec2: C Programming, Digital IO 
-│   ├── 2.1: Structure of a C program
+│   ├── 2.1: Structure of a C program C语言程序的结构
 │   │    ├── 
 │   │    ├── 
 │   │    └── 
 │   │
-│   ├── 2.2: Data types and operators
+│   ├── 2.2: Data types and operators 数据类型和运算符
 │   │    ├── 
 │   │    ├── 
 │   │    └── 
 │   │
-│   ├── 2.3: Flow control in C
+│   ├── 2.3: Flow control in C C语言中的数据流
+│   │    ├──  
+│   │    ├── 
+│   │    └── 
+│   │
+│   ├── 2.4: C functions 函数
 │   │    ├── 
 │   │    ├── 
 │   │    └── 
 │   │
-│   ├── 2.4: C functions
-│   │    ├── 
-│   │    ├── 
-│   │    └── 
-│   │
-│   ├── 2.5: Digital IO in ATmega16
+│   ├── 2.5: Digital IO in ATmega16 数字IO口
 │   │    ├── 
 │   │    ├── 
 │   │    └── 
