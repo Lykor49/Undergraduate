@@ -30,20 +30,24 @@ Reinforcement-Learning
 │   └── Policy Iteration
 │
 ├── Monte Carlo Learning 蒙特卡洛方法
-│   ├── 
-│   ├── 
-│   └── 
+│   ├── MC Basic
+│   ├── MC Exploring Starts
+│   └── MC ε-Greedy
 │
 ├── Stochastic Approximation and Stochastic Gradient Descent 随机近似与随机梯度下降
-│   ├── Incremental Approximation 增量式估计
+│   ├── Incremental Mean Estimation 增量均值估计
 │   ├── Robbins-Monro Algorithm 罗宾斯-门罗算法 (RM)
 │   ├── Gradient Descent / Batch Gradient Descent / mini-batch Gradient Descent (GD / BGD / MBGD)
 │   └── Stochastic Gradient Descent 随机梯度下降 (SGD)
 │
 ├── Temporal-Difference Learning 时序差分方法
-│   ├── 
-│   ├── 
-│   └── 
+│   ├── TD-Learning (状态值估计)
+│   ├── Sarsa (动作值估计)
+│   ├── Expected Sarsa
+│   ├── n-Step Sarsa
+│   ├── Q-Learning (最优动作值估计)
+│   ├── on-policy / off-policy
+│   └── 时序差分算法统一框架
 │
 ├── Value Function Approximation 值函数估计
 │   ├── 
