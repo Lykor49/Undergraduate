@@ -35,9 +35,10 @@ Reinforcement-Learning
 │   └── 
 │
 ├── Stochastic Approximation and Stochastic Gradient Descent 随机近似与随机梯度下降
-│   ├── Monte Carlo Approximation -> Incremental Approximation 增量式估计
+│   ├── Incremental Approximation 增量式估计
 │   ├── Robbins-Monro Algorithm 罗宾斯-门罗算法 (RM)
-│   └── 
+│   ├── Gradient Descent / Batch Gradient Descent / mini-batch Gradient Descent (GD / BGD / MBGD)
+│   └── Stochastic Gradient Descent 随机梯度下降 (SGD)
 │
 ├── Temporal-Difference Learning 时序差分方法
 │   ├── 
