@@ -50,9 +50,10 @@ Reinforcement-Learning
 │   └── 时序差分算法统一框架
 │
 ├── Value Function Approximation 值函数估计
-│   ├── 
-│   ├── 
-│   └── 
+│   ├── 表格法过渡函数法的思想
+│   ├── 基于值函数的时序差分算法: 状态值估计 (蒙特卡洛、TD算法)
+│   ├── 基于值函数的时序差分算法: 动作值估计 (Sarsa、Q-Learning)
+│   └── 深度Q网络 (DQN)
 │
 ├── Policy Gradient 策略梯度
 │   ├── Policy-based 基于策略的 (从表格到函数 -> 引出函数表示策略)
@@ -60,13 +61,24 @@ Reinforcement-Learning
 │   ├── Gradient of metric 目标函数的梯度
 │   └── Monte Carlo policy gradient 蒙特卡洛策略梯度 (REINFORCE)
 │
-├── Actor-Critic Methods
-│   ├── 
-│   ├── 
-│   └── 
+└── Actor-Critic Methods
+    ├── Q Actor-Critic (QAC)
+    ├── Advantage Actor-Critic (A2C)
+    ├── Off-policy 策略梯度定理
+    └── Deterministic Actor-Critic (DPG) 
 
 
 
 
-
+算法学习模版
+1. 背景与目标 (Why + What)
+算法为什么出现、前面方法有什么局限、具体想解决什么问题
+2. 核心思想
+用一段话把算法最核心的机制讲清楚
+3. 算法流程
+按照真正执行顺序将算法从输入到输出完整跑一遍 (Input -> Processing -> Update -> Output)
+4. 核心公式与数学原理
+真正决定算法本质的公式, 并解释公式为什么这样设计
+5. 算法特性与关键问题
+ex.on-policy/off-policy、优缺点、相邻算法区别、常见面试问题
 
